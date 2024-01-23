@@ -13,7 +13,7 @@ function Login() {
   function handleCallbackResponse(response) {
     const userObject = jwtDecode(response.credential);
     console.log(userObject);
-    localStorage.setItem("user", JSON.stringify(userObject.sub));
+    localStorage.setItem("user", JSON.stringify(userObject));
 
     const { given_name, sub, picture } = userObject;
 
